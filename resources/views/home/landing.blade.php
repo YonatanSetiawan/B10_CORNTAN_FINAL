@@ -17,7 +17,7 @@
 </head>
 
 <body id="page-top">
-    <nav class="navbar navbar-expand-lg" style="background-color: #335010">
+    <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #335010">
         <div class="container">
             <a class="navbar-brand border" href="/">
                 <img src="{{ asset('images/corntan-logo.png') }}" alt="" width="50" height="50" class="d-inline-block align-text-top">
@@ -38,13 +38,13 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img src="https://blog.chsbuffalo.org/wp-content/uploads/2019/07/corn-field.jpg" class="d-block w-100" alt="...">
+            <img src="{{ asset('images/1.png') }}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-            <img src="https://blog.chsbuffalo.org/wp-content/uploads/2019/07/corn-field.jpg" class="d-block w-100" alt="...">
+            <img src="{{ asset('images/3.png') }}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-            <img src="https://blog.chsbuffalo.org/wp-content/uploads/2019/07/corn-field.jpg" class="d-block w-100" alt="...">
+            <img src="{{ asset('images/4.png') }}" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
