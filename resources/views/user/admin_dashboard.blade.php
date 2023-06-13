@@ -25,11 +25,11 @@
                     <td class="d-flex text-light">
                         <form action="{{ route('admin.reject', $datamember->id_user) }}" method="POST">
                             @csrf
-                            <button type="submit" class="btn btn-danger mr-2">Tolak</button>
+                            <button type="submit" class="btn btn-danger mr-2">Batal</button>
                         </form>
                         <form action="{{ route('admin.approve', $datamember->id_user) }}" method="POST">
                             @csrf
-                            <button type="submit" class="btn btn-success">Terima</button>
+                            <button type="submit" class="btn btn-success">Konfirmasi</button>
                         </form>
                     </td>
                 </tr>

@@ -24,7 +24,7 @@
     <a type="button" class="btn btn-primary text-light" data-bs-toggle="modal" data-bs-target="#staticBukti" class="btn btn-primary">Upload bukti pembayaran</a>
 @endif
 @if (Auth::user()->is_member == 8)
-    <div class="alert alert-primary">Proses pembayaran anda sedang diproses, mohon tunggu</div>
+    <div class="alert alert-primary">Silahkan tunggu email konfirmasi</div>
     {{-- button lihat bukti pembayaran --}}
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -83,7 +83,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
-            <button type="submit" class="btn btn-success">Upload</button>
+            <button type="submit" class="btn btn-success">Unggah</button>
         </div>
         </div>
     </form>
@@ -120,16 +120,24 @@
         var value = selectedOption.value;
         var bank = document.createElement('div');
         var number = document.createElement('div');
+        var nominal = document.createElement('div');
+        var tujuan = document.createElement('div');
         if (value == 1) {
             bank.innerHTML = "Bank : BCA";
             number.innerHTML = "Virtual Account : 0123621321";
+            nominal.innerHTML = "Rp89.000";
+            tujuan.innerHTML = "a/n CornTan";
         } else if (value == 2) {
             // add image qr to bank
             bank.innerHTML = "Go Pay 0891247127482";
             number.innerHTML = "<img src='{{ asset('images/qrcode.jpg') }}' alt='qr-code' width='300px'>";
+            nominal.innerHTML = "Rp89.000";
+            tujuan.innerHTML = "a/n CornTan";
         } else if (value == 3) {
             bank.innerHTML = "Dana";
             number.innerHTML = "Nomor : 08123456789";
+            nominal.innerHTML = "Rp89.000";
+            tujuan.innerHTML = "a/n CornTan";
         } else {
             bank.innerHTML = "";
             number.innerHTML = "";
@@ -139,6 +147,8 @@
         bank.insertAdjacentHTML("beforeend", "<br>");
         paymentDetails.appendChild(bank);
         paymentDetails.appendChild(number);
+        paymentDetails.appendChild(nominal);
+        paymentDetails.appendChild(tujuan);
         paymentDetails.classList.remove('d-none');
     });
 </script>

@@ -25,8 +25,8 @@
             <div class="text-light fw-bold fs-4">Corntan</div>
             {{-- register and login button --}}
             <div class="d-flex">
-                <a href="{{ route('login') }}" class="btn btn-primary me-2">Login</a>
-                <a href="{{ route('register') }}" class="btn btn-success">Register</a>
+                <a href="{{ route('login') }}" class="btn btn-primary me-2">Masuk</a>
+                <a href="{{ route('register') }}" class="btn btn-success">Daftar</a>
             </div>
         </div>
     </nav>
@@ -58,10 +58,10 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script>
-        // push next button every 5 seconds
+        // push next button every 10 seconds
         setInterval(() => {
             document.getElementById('next-button').click();
-        }, 5000);
+        }, 10000);
     </script>
 </body>
 
